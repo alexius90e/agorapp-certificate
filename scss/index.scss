@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
+
+body {
+  background-color: #2f2e32;
+}
+
+.certificate {
+  position: relative;
+  width: 450px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #1c1b1f;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -54px;
+    width: 126px;
+    height: 81px;
+    transform: rotate(10.365deg);
+    background: url(../assets/cubes-1.png) center no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: -22px;
+    width: 118px;
+    height: 76px;
+    transform: rotate(-3deg);
+    background: url(../assets/cubes-2.png) top left no-repeat;
+  }
+
+  &__title {
+    margin: 0 0 33px;
+    color: #fff;
+    text-align: center;
+    font-family: "Goldman";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    & span {
+      font-family: "Red Hat Text";
+      font-weight: 700;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 24px;
+      margin-bottom: 15px;
+
+      &-title {
+        display: inline-block;
+        color: #fff;
+        text-align: right;
+        font-family: "Goldman";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      &-text {
+        display: inline-block;
+        min-width: 160px;
+        color: #fff;
+        font-family: "Red Hat Text";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+        border-bottom: 1px dashed #fff;
+      }
+
+      &-question {
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        transform: translateY(-50%);
+
+        &-icon {
+          width: 15px;
+          height: 15px;
+          background: url(../assets/question.svg) center no-repeat;
+          background-size: 13px;
+
+          cursor: pointer;
+        }
+
+        &-info {
+          position: absolute;
+          right: -4px;
+          bottom: 30px;
+          display: none;
+          padding: 13px 22px;
+          list-style-type: none;
+          border-radius: 10px;
+          background: radial-gradient(318.85% 112.36% at 11.79% 9.26%, #262842 0%, #24424a 100%);
+
+          &-item {
+            width: max-content;
+            color: #fff;
+            font-family: "Red Hat Text";
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+
+            &:nth-child(2) {
+              padding-left: 8px;
+            }
+
+            &:nth-child(3) {
+              padding-left: calc(8px * 2);
+            }
+
+            &:nth-child(4) {
+              padding-left: calc(8px * 3);
+            }
+
+            &:nth-child(5) {
+              padding-left: calc(8px * 4);
+            }
+
+            &:nth-child(6) {
+              padding-left: calc(8px * 5);
+            }
+
+            &:nth-child(7) {
+              padding-left: calc(8px * 6);
+            }
+          }
+        }
+
+        &:hover &-info {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 120px;
+    left: 33px;
+
+    &-bg {
+      position: relative;
+      z-index: 2;
+      filter: blur(50px);
+    }
+
+    &-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 5;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &__ava-link {
+    position: absolute;
+    left: 20px;
+    bottom: 13px;
+    opacity: 0.5;
+    transition: opacity ease-in-out 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    & a {
+      display: block;
+
+      & img {
+        display: block;
+        max-width: 18px;
+        height: auto;
+
+        filter: drop-shadow(0px 5.292px 1.764px rgba(0, 0, 0, 0.25));
+      }
+    }
+  }
+
+  &__ellipses {
+    &-item {
+      position: absolute;
+      z-index: 1;
+      filter: blur(75px);
+
+      &_top {
+        top: 0;
+        left: -50px;
+      }
+
+      &_bottom {
+        left: 150px;
+        bottom: -56px;
+      }
+    }
+  }
+}
